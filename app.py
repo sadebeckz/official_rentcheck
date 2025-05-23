@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import pickle
+from sklearn.ensemble import RandomForestClassifier  # ✅ Needed for unpickling the model
 
 # ----------------------------
 # 🔹 Load trained model
@@ -108,6 +109,5 @@ if st.button("Analyze Property") and zillow_url:
             "ML Prediction": [ml_rating]
         })
         st.dataframe(summary)
-
     else:
         st.warning("❌ Could not retrieve property info. Check URL or try again.")
