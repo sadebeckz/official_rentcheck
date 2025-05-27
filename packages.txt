@@ -1,4 +1,4 @@
 python3-dev
 git-lfs
-libgit2-dev  # Required for pygit2
-build-essential  # For compiling dependencies
+libgit2-dev
+build-essential
